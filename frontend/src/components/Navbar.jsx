@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAuthStore } from "../store/useAuthStore";
-import { LogOut, MessageSquare, Settings, User } from "lucide-react";
+import { LogOut, Settings, User } from "lucide-react";
 
 const Navbar = () => {
   const { logout, authUser } = useAuthStore();
@@ -14,10 +14,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-full">
           <div className="flex items-center gap-8">
             <Link to="/" className="flex items-center gap-2.5 hover:opacity-80 transition-all">
-              <div className="size-9 rounded-lg bg-primary/10 flex items-center justify-center">
-                <MessageSquare className="w-5 h-5 text-primary" />
+              <div className="size-9 rounded-lg bg-primary/10 flex items-center justify-center skew-x-12 -rotate-12">
+                {/* <MessageSquare className="w-5 h-5 text-primary" /> */}
+                <img src="/chat.png" alt="chat_logo"  className="w-7 h-7"/>
               </div>
-              <h1 className="text-lg font-bold">Chatty</h1>
+              <h1 className="text-lg font-bold skew-x-12 -rotate-5">CHAT_APP</h1>
             </Link>
           </div>
 
